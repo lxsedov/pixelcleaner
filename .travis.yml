@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+ - 7.0
+branches:
+only:
+ - master
+script:
+ - echo Delpoying
+install:
+ - npm install -g firebase-tools
+after_success:
+ - firebase deploy --token $FIREBASE_TOKEN
+   
